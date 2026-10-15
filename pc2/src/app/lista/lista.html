@@ -1,0 +1,19 @@
+<h2>Reporte de estudiantes</h2>
+<table border="1">
+  <tr>
+    <th>Nombre</th>
+    <th>Nota 1</th>
+    <th>Nota 2</th>
+    <th>Nota 3</th>
+    <th>Detalle</th>
+  </tr>
+  @for (e of estudiantes(); track e.id) {
+    <tr>
+      <td>{{ e.nombre }}</td>
+      <td>{{ e.nota1 }}</td>
+      <td>{{ e.nota2 }}</td>
+      <td>{{ e.nota3 }}</td>
+      <td><a [routerLink]="['/detalle', e.id]"><button>Detalle</button></a></td>
+    </tr>
+  }
+</table>

@@ -1,0 +1,9 @@
+<h2>Detalle del estudiante</h2>
+@if (est()) {
+  <p>Nombre: {{ est().nombre }}</p>
+  <p>Suma de notas: {{ est().suma }}</p>
+  <p>Promedio: {{ est().promedio }}</p>
+  <p>Estado académico: {{ est().estado }}</p>
+  <p>Observación: {{ est().observacion }}</p>
+}
+<a routerLink="/"><button>Volver</button></a>
